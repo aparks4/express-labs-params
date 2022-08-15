@@ -19,7 +19,13 @@ app.get('/greeting/:name', function(req, res, name) {
 });
 
 
-
+app.get('/tip/:total/:tipPercentage', function(req, res) {
+    // let total = req.params.total;
+    // let tipPercentage = req.params.tipPercentage / 100;
+    // let answer = (total * tipPercentage).toString();
+    // res.send(`${answer}`);
+    res.send((req.params.total * (req.params.tipPercentage / 100)).toString());
+});
 
 
 
